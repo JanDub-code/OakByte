@@ -451,33 +451,73 @@ body {
     box-shadow: 0 0 8px var(--accent-green-glow);
 }
 
-/* --- Market Stats --- */
-.market-stats {
+/* --- Market Analysis Redesign --- */
+.market-insights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.insight-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius-sm);
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 0.5rem;
+    transition: var(--transition-smooth);
 }
 
-.stat {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
+.insight-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--border-card);
+    transform: translateY(-2px);
 }
 
-.stat-value {
-    font-size: 2rem;
+.insight-value {
+    font-size: 1.75rem;
     font-weight: 800;
+    line-height: 1;
+    color: var(--text-primary);
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 
-.stat-label {
+.insight-label {
+    font-size: 0.82rem;
+    line-height: 1.5;
     color: var(--text-secondary);
-    font-size: 0.85rem;
+}
+
+.insight-label strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.88rem;
+    letter-spacing: 0.01em;
+}
+
+.market-footer {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.market-footer p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.market-footer strong {
+    color: var(--accent-primary);
+    font-weight: 600;
 }
 
 .muted {
@@ -1227,86 +1267,169 @@ body {
 }
 
 /* --- Timeline --- */
-.timeline {
-    position: relative;
-    padding-left: 2.5rem;
+/* --- Fancy Roadmap & Post-Launch --- */
+.roadmap-fancy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
 }
 
-.timeline::before {
+.timeline-v2 {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline-v2::before {
     content: '';
     position: absolute;
-    left: 10px;
+    left: 1.2rem;
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, var(--accent-primary) 0%, var(--border-card) 100%);
+    background: linear-gradient(to bottom,
+            var(--accent-primary) 0%,
+            var(--accent-primary) 30%,
+            var(--border-card) 100%);
+    opacity: 0.3;
 }
 
-.timeline-item {
+.tm-item {
     position: relative;
     padding-bottom: 2.5rem;
 }
 
-.timeline-item:last-child {
+.tm-item:last-child {
     padding-bottom: 0;
 }
 
-.timeline-marker {
+.tm-marker {
+    display: none;
+}
+
+.tm-content {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    transition: var(--transition-smooth);
+    cursor: default;
+}
+
+.tm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.tm-header h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.tm-date {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-primary);
+    background: var(--accent-primary-glow);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.tm-content p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.tm-item.tm-active .tm-content {
+    background: rgba(188, 19, 254, 0.05);
+    border-color: rgba(188, 19, 254, 0.4);
+    box-shadow: 0 0 20px var(--accent-primary-glow);
+}
+
+.tm-item:hover .tm-content {
+    background: rgba(188, 19, 254, 0.08);
+    border-color: var(--accent-primary);
+    transform: translateX(8px);
+}
+
+/* Post-Launch Fancy */
+.post-launch-fancy h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.pl-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.pl-card::after {
+    content: '';
     position: absolute;
-    left: -2.5rem;
-    top: 0.35rem;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: var(--bg-primary);
-    border: 2px solid var(--accent-primary);
-    z-index: 1;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(188, 19, 254, 0.1), transparent 70%);
+    opacity: 0;
     transition: var(--transition-smooth);
 }
 
-.timeline-marker.active {
-    background: var(--accent-primary);
-    box-shadow: 0 0 15px rgba(188, 19, 254, 0.4);
+.pl-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-hover);
 }
 
-.timeline-item:hover .timeline-marker {
-    transform: scale(1.2);
-    box-shadow: 0 0 12px rgba(188, 19, 254, 0.3);
+.pl-card:hover::after {
+    opacity: 1;
 }
 
-.timeline-content h4 {
-    font-size: 1.05rem;
+.pl-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pl-card h5 {
+    font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
-.timeline-date {
-    font-size: 0.8rem;
-    display: inline-block;
-    margin-bottom: 0.4rem;
+.pl-card p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0;
 }
 
-.timeline-content p {
-    color: var(--text-secondary);
-    font-size: 0.88rem;
+@media (max-width: 1024px) {
+    .roadmap-fancy {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 }
 
-/* Tags */
-.tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.tag {
-    font-size: 0.78rem;
-    font-weight: 500;
-    padding: 0.3rem 0.75rem;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border-card);
-    border-radius: 999px;
-    color: var(--text-secondary);
+@media (max-width: 480px) {
+    .pl-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- TODO Tags --- */
