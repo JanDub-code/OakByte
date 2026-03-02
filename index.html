@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiftHunters — Pitch Deck</title>
+    <meta name="description"
+        content="RiftHunters: Co-op procedural dungeon crawler with proximity voice chat and emergent AI. Pitch Deck for Steam publishers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="main-nav">
+        <div class="nav-brand">
+            <span class="nav-logo">⚔️</span>
+            <span class="nav-title">RiftHunters</span>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#hook" class="nav-link">Hook</a>
+            <a href="#loop" class="nav-link">Loop</a>
+            <a href="#pillars" class="nav-link">Pillars</a>
+            <a href="#audience" class="nav-link">Audience</a>
+            <a href="#art" class="nav-link">Art</a>
+            <a href="#tech" class="nav-link">Tech</a>
+            <a href="#status" class="nav-link">Status</a>
+            <a href="#roadmap" class="nav-link">Roadmap</a>
+            <a href="#market" class="nav-link">Market</a>
+            <a href="#monetization" class="nav-link">Monetization</a>
+            <a href="#competitive" class="nav-link">Competitive</a>
+            <a href="#team" class="nav-link">Team</a>
+            <a href="#budget" class="nav-link">Budget</a>
+            <a href="#ask" class="nav-link">Ask</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <main>
+
+        <!-- SLIDE 1 — Hook -->
+        <section class="slide slide-hero" id="hook">
+            <div class="hero-particles" id="hero-particles"></div>
+            <div class="slide-content hero-content">
+                <div class="hero-badge">Steam · PC · Co-op 2–4 Players · Unity 6.3 · Peer to peer</div>
+                <h1 class="hero-title">
+                    <span class="hero-title-accent">Rift</span>Hunters
+                </h1>
+                <p class="hero-tagline">Co-op procedural dungeon crawler with proximity voice chat</p>
+                <p class="hero-desc">Explore depth of incontinuum with friends, solve puzzles, avoid
+                    enemies, collect loot and try not to die. Every run is different.</p>
+                <div class="hero-cta">
+                    <a href="#ask" class="btn btn-ghost">What We're Looking For</a>
+                </div>
+            </div>
+            <div class="slide-number">01</div>
+        </section>
+
+        <!-- SLIDE 2 — Game Loop -->
+        <section class="slide" id="loop">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Core Gameplay Loop</h2>
+                </div>
+                <div class="loop-flow">
+                    <div class="loop-node loop-taverna">
+                        <div class="loop-icon">🍺</div>
+                        <h3>TAVERN</h3>
+                        <p>Hub World</p>
+                        <ul class="loop-details">
+                            <li>Select your character</li>
+                            <li>Pick the best equipment</li>
+                            <li>Choose the right challange</li>
+                        </ul>
+                    </div>
+                    <div class="loop-arrow">
+                        <svg viewBox="0 0 60 24" fill="none">
+                            <path d="M0 12h50m0 0l-8-8m8 8l-8 8" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="loop-node loop-dungeon">
+                        <div class="loop-icon">⚔️</div>
+                        <h3>DUNGEON</h3>
+                        <p>Procedural Mission</p>
+                        <ul class="loop-details">
+                            <li>Explore ever changing dungeons</li>
+                            <li>Face dangerous enemies and hidden traps</li>
+                            <li>Solve complex puzzles</li>
+                            <li>Find new gear and collect loot</li>
+                        </ul>
+                    </div>
+                    <div class="loop-arrow">
+                        <svg viewBox="0 0 60 24" fill="none">
+                            <path d="M0 12h50m0 0l-8-8m8 8l-8 8" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="loop-node loop-extract">
+                        <div class="loop-icon">🏆</div>
+                        <h3>EXTRACTION</h3>
+                        <p>Level Complete</p>
+                        <ul class="loop-details">
+                            <li>Choose what to bring back</li>
+                            <li>Be sure not to miss any loot</li>
+                            <li>Return with new shiny items</li>
+                        </ul>
+                    </div>
+                    <div class="loop-arrow">
+                        <svg viewBox="0 0 60 24" fill="none">
+                            <path d="M0 12h50m0 0l-8-8m8 8l-8 8" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="loop-node loop-taverna">
+                        <div class="loop-icon">🍺</div>
+                        <h3>TAVERN</h3>
+                        <p>Hub World</p>
+                        <ul class="loop-details">
+                            <li>Upgrade your equipment</li>
+                            <li>Level up characters</li>
+                            <li>Head back into danger</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="loop-return">
+                    <svg viewBox="0 0 800 60" fill="none" class="loop-return-svg">
+                        <path d="M750 10 Q780 10 780 30 Q780 50 750 50 L50 50 Q20 50 20 30 Q20 10 50 10"
+                            stroke="currentColor" stroke-width="2" stroke-dasharray="8 4" fill="none" />
+                        <polygon points="55,5 45,10 55,15" fill="currentColor" />
+                    </svg>
+                    <span class="loop-return-label">Replayability — every run is unique</span>
+                </div>
+                <div class="highlight-box">
+                    <strong>Key:</strong> Procedural generation + random quests + emergent AI = no two runs are the same
+                </div>
+            </div>
+            <div class="slide-number">02</div>
+        </section>
+
+        <!-- SLIDE 3 — Core Pillars -->
+        <section class="slide" id="pillars">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Core Pillars</h2>
+                    <p class="slide-subtitle">Unique Selling Points</p>
+                </div>
+                <div class="grid grid-2">
+                    <div class="pillar-card" data-pillar="1">
+                        <div class="pillar-number">01</div>
+                        <div class="pillar-icon">🎯</div>
+                        <h3>Unique Class System</h3>
+                        <ul>
+                            <li>Teamwork is the key - 5 classes with distinct passive bonuses</li>
+                            <li>Every player has his role - <strong>Each class can only appear once per team</strong> → strategic selection</li>
+                            <li>Class-specific starting equipment</li>
+                        </ul>
+                        <div class="pillar-classes">
+                            <span class="class-badge hunter">Hunter</span>
+                            <span class="class-badge cleric">Cleric</span>
+                            <span class="class-badge scholar">Scholar</span>
+                            <span class="class-badge thief">Thief</span>
+                            <span class="class-badge deprived">Deprived</span>
+                        </div>
+                    </div>
+                    <div class="pillar-card" data-pillar="2">
+                        <div class="pillar-number">02</div>
+                        <div class="pillar-icon">🧠</div>
+                        <h3>Emergent AI</h3>
+                        <ul>
+                            <li><strong>Metal Malej</strong> — stalker that only attacks isolated players</li>
+                            <li><strong>Lightstarved Soul</strong> — reacts to player presence</li>
+                            <li>AI reacts to lit fires, player positions, and group dynamics</li>
+                        </ul>
+                        <div class="ai-states">
+                            <span class="state-badge lurk">Lurk</span>
+                            <span class="state-badge stalk">Stalk</span>
+                            <span class="state-badge flee">Flee</span>
+                            <span class="state-badge strike">Strike</span>
+                        </div>
+                    </div>
+                    <div class="pillar-card" data-pillar="3">
+                        <div class="pillar-number">03</div>
+                        <div class="pillar-icon">�</div>
+                        <h3>Voice-based Gameplay</h3>
+                        <ul>
+                            <li><strong>Proximity voice chat</strong> as a game mechanic</li>
+                            <li><strong>Statue Silence puzzle</strong> — stay silent for 15s to reveal a secret</li>
+                            <li>Dead players hear the living, but can't talk to them → horror element</li>
+                        </ul>
+                        <div class="voice-viz" id="voice-viz">
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                        </div>
+                    </div>
+                    <div class="pillar-card" data-pillar="4">
+                        <div class="pillar-number">04</div>
+                        <div class="pillar-icon">�️</div>
+                        <h3>Procedural Dungeons</h3>
+                        <ul>
+                            <li>Modular prefab system (connector-based)</li>
+                            <li><strong>Deterministic seed</strong> → host generates, clients sync</li>
+                            <li>Every run has different layout, traps, and puzzles</li>
+                        </ul>
+                        <div class="maze-preview" id="maze-preview"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">03</div>
+        </section>
+
+        <!-- SLIDE 4 — Target Audience -->
+        <section class="slide" id="audience">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Target Audience</h2>
+                </div>
+                <div class="audience-profile">
+                    <div class="profile-card">
+                        <h3>Primary Target Audience</h3>
+                        <div class="profile-stats">
+                            <div class="profile-stat"><span class="profile-label">Age</span><span
+                                    class="profile-value">16–30</span></div>
+                            <div class="profile-stat"><span class="profile-label">Platform</span><span
+                                    class="profile-value">Steam PC</span></div>
+                            <div class="profile-stat"><span class="profile-label">Profile</span><span
+                                    class="profile-value">Co-op with friends</span></div>
+                            <div class="profile-stat"><span class="profile-label">Motivation</span><span
+                                    class="profile-value">Social, Adrenaline, Replay</span></div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="section-title">Comparable Titles</h3>
+                <div class="comparison-table-wrapper">
+                    <table class="data-table comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Game</th>
+                                <th>What We Share</th>
+                                <th>How We Differ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Lethal Company</strong></td>
+                                <td>Co-op horror, proximity voice, viral potential</td>
+                                <td>Deeper combat, class system, puzzles</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dark and Darker</strong></td>
+                                <td>Dungeon crawler, loot, classes, extraction</td>
+                                <td>Cooperative (not PvP), voice puzzles</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Barotrauma</strong></td>
+                                <td>Co-op, emergent AI, role division</td>
+                                <td>Fantasy setting, dungeon mechanics</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Phasmophobia</strong></td>
+                                <td>Voice-based, co-op investigation</td>
+                                <td>Action combat, class diversity</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="slide-number">04</div>
+        </section>
+
+        <!-- SLIDE 5 — Art Direction -->
+        <section class="slide" id="art">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Visual Style & Art Direction</h2>
+                </div>
+                <div class="art-grid">
+                    <div class="art-placeholder">
+                        <div class="placeholder-inner">
+                            <span class="placeholder-icon">🖼️</span>
+                            <span>Screenshot / Concept Art</span>
+                            <span class="placeholder-note">TBD</span>
+                        </div>
+                    </div>
+                    <div class="art-placeholder">
+                        <div class="placeholder-inner">
+                            <span class="placeholder-icon">🖼️</span>
+                            <span>Dungeon Atmosphere</span>
+                            <span class="placeholder-note">TBD</span>
+                        </div>
+                    </div>
+                    <div class="art-placeholder">
+                        <div class="placeholder-inner">
+                            <span class="placeholder-icon">🖼️</span>
+                            <span>Combat / AI Moment</span>
+                            <span class="placeholder-note">TBD</span>
+                        </div>
+                    </div>
+                    <div class="art-placeholder">
+                        <div class="placeholder-inner">
+                            <span class="placeholder-icon">🖼️</span>
+                            <span>Tavern Hub</span>
+                            <span class="placeholder-note">TBD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-2" style="margin-top:2rem;">
+                    <div class="card">
+                        <h4>Visual Identity</h4>
+                        <ul>
+                            <li>Dark, atmospheric dungeons with dynamic lighting</li>
+                            <li>Fantasy gothic aesthetic</li>
+                            <li>Ragdoll physics — comedic and horror moments</li>
+                            <li>Emote system for social interaction</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Technical Visuals</h4>
+                        <ul>
+                            <li>URP with custom light probes</li>
+                            <li>Audio occlusion through walls</li>
+                            <li>Portal/room visibility culling</li>
+                            <li>LOD system & distance culling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">05</div>
+        </section>
+
+        <!-- SLIDE 6 — Tech Readiness -->
+        <section class="slide" id="tech">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Multiplayer Tech Readiness</h2>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item done">
+                        <div class="tech-status">✅</div>
+                        <h4>Networking</h4>
+                        <p>Unity NGO + Steamworks.NET</p>
+                    </div>
+                    <div class="tech-item done">
+                        <div class="tech-status">✅</div>
+                        <h4>Voice Chat</h4>
+                        <p>Steam Voice + Proximity + Occlusion</p>
+                    </div>
+                    <div class="tech-item done">
+                        <div class="tech-status">✅</div>
+                        <h4>Procedural Sync</h4>
+                        <p>Seed-based synchronization</p>
+                    </div>
+                    <div class="tech-item done">
+                        <div class="tech-status">✅</div>
+                        <h4>Authority Model</h4>
+                        <p>Client-authority + Server validation</p>
+                    </div>
+                    <div class="tech-item done">
+                        <div class="tech-status">✅</div>
+                        <h4>Steam Integration</h4>
+                        <p>Lobby, invite, transport</p>
+                    </div>
+                    <div class="tech-item done">
+                        <div class="tech-status">✅</div>
+                        <h4>Offline Fallback</h4>
+                        <p>UnityTransport</p>
+                    </div>
+                    <div class="tech-item partial">
+                        <div class="tech-status">🔶</div>
+                        <h4>Cloud Save</h4>
+                        <p>JSON + Steam Cloud (code ready)</p>
+                    </div>
+                </div>
+                <div class="tech-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">💡</span>
+                        <span><strong>Host = Server + Client</strong> → no dedicated server needed = lower operational
+                            costs</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">💡</span>
+                        <span><strong>Event-based RPCs</strong> instead of constant sync = efficient bandwidth</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">💡</span>
+                        <span><strong>Deterministic seed</strong> for maps = minimal network traffic</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">06</div>
+        </section>
+
+        <!-- SLIDE 7 — Development Status -->
+        <section class="slide" id="status">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Current Development Status</h2>
+                </div>
+                <div class="status-sections">
+                    <div class="status-section">
+                        <h3 class="status-done-title">✅ Completed Systems</h3>
+                        <div class="status-bar-grid">
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">Class System (5 classes)</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">Inventory (pickup/drop/equip)</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">Combat (melee/ranged/magic)</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">AI Enemies (4 types)</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">Traps & Ragdoll</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">Puzzle Framework (5 types)</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">Quest + Dialog System</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">Proximity Voice Chat</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">Procedural Generation</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">Steam Multiplayer</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="100">
+                                <span class="sbar-label">UI/HUD + Emotes + Death/Spectate</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" style="--progress:100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-section">
+                        <h3 class="status-wip-title">🔶 Remaining</h3>
+                        <div class="status-bar-grid">
+                            <div class="status-bar-item" data-progress="60">
+                                <span class="sbar-label">Steam Cloud Integration</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill wip" style="--progress:60%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="30">
+                                <span class="sbar-label">Content (levels, items, quests)</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill wip" style="--progress:30%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="20">
+                                <span class="sbar-label">Polish (VFX, animations, audio)</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill wip" style="--progress:20%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="15">
+                                <span class="sbar-label">Balancing & QA</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill wip" style="--progress:15%"></div>
+                                </div>
+                            </div>
+                            <div class="status-bar-item" data-progress="10">
+                                <span class="sbar-label">Steam Page & Marketing</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill wip" style="--progress:10%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-callout">
+                    <span class="phase-icon">📍</span>
+                    <div>
+                        <strong>Current Phase:</strong> <span class="todo-tag">[TBD]</span><br>
+                        <strong>Target:</strong> <span class="todo-tag">[TBD]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">07</div>
+        </section>
+
+        <!-- SLIDE 8 — Roadmap -->
+        <section class="slide" id="roadmap">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Roadmap</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Demo</h4>
+                            <span class="timeline-date">3. 2026</span>
+                            <p>Fully playable level with core mechanics</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Early Access</h4>
+                            <span class="timeline-date">6. 2026</span>
+                            <p>Random generation, replayability and new location with enemys and loot.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>First content update</h4>
+                            <span class="timeline-date">8. 2026</span>
+                            <p>First big update with 2 new locations</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Second content update</h4>
+                            <span class="timeline-date">10. 2026</span>
+                            <p>Second big update with 2 new locations</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker active"></div>
+                        <div class="timeline-content">
+                            <h4>Full Release</h4>
+                            <span class="timeline-date">12. 2026</span>
+                            <p>Final location</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top:2rem;">
+                    <h4>Post-Launch Plan</h4>
+                    <div class="tag-row">
+                        <span class="tag">New dungeon biomes</span>
+                        <span class="tag">New classes</span>
+                        <span class="tag">Seasonal events</span>
+                        <span class="tag">Workshop / Custom maps</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">08</div>
+        </section>
+
+        <!-- SLIDE 9 — Market -->
+        <section class="slide" id="market">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Problem / Market Opportunity</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card card-glow">
+                        <h3 class="card-title">🔴 The Problem</h3>
+                        <p>Players want cooperative dungeon experiences, but most titles in the genre lack:</p>
+                        <ul class="feature-list">
+                            <li><span class="dot dot-red"></span>True <strong>gameplay depth</strong> (classes, systems,
+                                puzzles)</li>
+                            <li><span class="dot dot-red"></span><strong>Proximity voice</strong> as a game mechanic
+                            </li>
+                            <li><span class="dot dot-red"></span>Sufficient <strong>procedural variability</strong></li>
+                            <li><span class="dot dot-red"></span><strong>Emergent AI</strong> that reacts to player
+                                behavior</li>
+                        </ul>
+                    </div>
+                    <div class="card card-glow">
+                        <h3 class="card-title">🟢 The Opportunity</h3>
+                        <div class="market-stats">
+                            <div class="stat">
+                                <span class="stat-value">$100M+</span>
+                                <span class="stat-label">Lethal Company revenue</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">3M+</span>
+                                <span class="stat-label">Dark and Darker copies sold</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">∞</span>
+                                <span class="stat-label">Viral potential (voice clips)</span>
+                            </div>
+                        </div>
+                        <p class="muted">Explosive growth of co-op games on Steam. Players are actively searching for
+                            new titles in this segment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">09</div>
+        </section>
+
+        <!-- SLIDE 10 — Monetization -->
+        <section class="slide" id="monetization">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Monetization Strategy</h2>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card card-center">
+                        <div class="price-tag">Premium</div>
+                        <p class="price-value todo-tag">[TBD price]</p>
+                        <p class="muted">One-time purchase on Steam</p>
+                    </div>
+                    <div class="card card-center">
+                        <h4>DLC (Post-launch)</h4>
+                        <ul>
+                            <li>Cosmetic DLC (skins, emotes)</li>
+                            <li>Content DLC (biomes, classes)</li>
+                            <li>Soundtrack DLC</li>
+                        </ul>
+                    </div>
+                    <div class="card card-center">
+                        <h4>Why NOT F2P?</h4>
+                        <ul>
+                            <li>Target audience prefers premium</li>
+                            <li>Lower operational costs</li>
+                            <li>Community trust</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">10</div>
+        </section>
+
+        <!-- SLIDE 11 — Competitive Positioning -->
+        <section class="slide" id="competitive">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Competitive Positioning</h2>
+                </div>
+                <div class="comparison-table-wrapper">
+                    <table class="data-table feature-matrix">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th class="highlight-col">RiftHunters</th>
+                                <th>Dark&Darker</th>
+                                <th>Lethal Co.</th>
+                                <th>Phasmophobia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Co-op PvE</strong></td>
+                                <td class="highlight-col"><span class="check yes">✅</span></td>
+                                <td><span class="check no">❌ PvPvE</span></td>
+                                <td><span class="check yes">✅</span></td>
+                                <td><span class="check yes">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Class System</strong></td>
+                                <td class="highlight-col"><span class="check yes">✅ 5 unique</span></td>
+                                <td><span class="check yes">✅</span></td>
+                                <td><span class="check no">❌</span></td>
+                                <td><span class="check no">❌</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Proximity Voice</strong></td>
+                                <td class="highlight-col"><span class="check yes">✅ + Puzzles!</span></td>
+                                <td><span class="check no">❌</span></td>
+                                <td><span class="check yes">✅</span></td>
+                                <td><span class="check yes">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Procedural Maps</strong></td>
+                                <td class="highlight-col"><span class="check yes">✅</span></td>
+                                <td><span class="check yes">✅</span></td>
+                                <td><span class="check yes">✅</span></td>
+                                <td><span class="check no">❌</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Emergent AI</strong></td>
+                                <td class="highlight-col"><span class="check yes">✅ Metal Malej</span></td>
+                                <td><span class="check no">❌</span></td>
+                                <td><span class="check partial">🔶</span></td>
+                                <td><span class="check yes">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Combat Depth</strong></td>
+                                <td class="highlight-col"><span class="check yes">✅ Full</span></td>
+                                <td><span class="check yes">✅</span></td>
+                                <td><span class="check no">❌</span></td>
+                                <td><span class="check no">❌</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Puzzles</strong></td>
+                                <td class="highlight-col"><span class="check yes">✅ Voice + Physical</span></td>
+                                <td><span class="check no">❌</span></td>
+                                <td><span class="check no">❌</span></td>
+                                <td><span class="check partial">🔶 ID only</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="slide-number">11</div>
+        </section>
+
+        <!-- SLIDE 12 — Team -->
+        <section class="slide" id="team">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>The Team</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="team-card">
+                        <div class="team-avatar">👨‍💻</div>
+                        <h4>Game Design & Programming</h4>
+                        <p class="todo-tag">[TBD]</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">🎨</div>
+                        <h4>Art / 3D</h4>
+                        <p class="todo-tag">[TBD]</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">🔊</div>
+                        <h4>Sound Design</h4>
+                        <p class="todo-tag">[TBD]</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">📢</div>
+                        <h4>Marketing</h4>
+                        <p class="todo-tag">[TBD]</p>
+                    </div>
+                </div>
+                <div class="grid grid-2" style="margin-top:1rem;">
+                    <div class="card card-center">
+                        <span class="detail-label">Team Size</span>
+                        <span class="todo-tag">[TBD]</span>
+                    </div>
+                    <div class="card card-center">
+                        <span class="detail-label">Development Time</span>
+                        <span class="todo-tag">[TBD]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">12</div>
+        </section>
+
+        <!-- SLIDE 13 — Budget -->
+        <section class="slide" id="budget">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Scope & Budget</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h4>Budget</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Estimate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Investment to date</td>
+                                    <td class="todo-tag">[TBD]</td>
+                                </tr>
+                                <tr>
+                                    <td>Needed for EA launch</td>
+                                    <td class="todo-tag">[TBD]</td>
+                                </tr>
+                                <tr>
+                                    <td>Needed for Full Release</td>
+                                    <td class="todo-tag">[TBD]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card">
+                        <h4>Revenue Projections</h4>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Scenario</th>
+                                    <th>Units</th>
+                                    <th>Revenue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pessimistic</td>
+                                    <td class="todo-tag">[?]</td>
+                                    <td class="todo-tag">[?]</td>
+                                </tr>
+                                <tr>
+                                    <td>Realistic</td>
+                                    <td class="todo-tag">[?]</td>
+                                    <td class="todo-tag">[?]</td>
+                                </tr>
+                                <tr>
+                                    <td>Optimistic</td>
+                                    <td class="todo-tag">[?]</td>
+                                    <td class="todo-tag">[?]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">13</div>
+        </section>
+
+        <!-- SLIDE 14 — Ask -->
+        <section class="slide slide-ask" id="ask">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>What We're Looking For</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card card-glow">
+                        <h3 class="card-title">🤝 What We Need</h3>
+                        <ul class="ask-list">
+                            <li><span class="ask-icon">💰</span> Funding <span class="todo-tag">[TBD]</span></li>
+                            <li><span class="ask-icon">📢</span> Marketing & PR — Steam visibility, press, influencers
+                            </li>
+                            <li><span class="ask-icon">🧪</span> QA & Localization</li>
+                            <li><span class="ask-icon">📊</span> Steam page management — wishlists, festivals</li>
+                            <li><span class="ask-icon">🧭</span> Business mentoring — pricing, launch strategy</li>
+                        </ul>
+                    </div>
+                    <div class="card card-glow">
+                        <h3 class="card-title">🎁 What We Offer</h3>
+                        <ul class="offer-list">
+                            <li>A working product with a robust technical foundation</li>
+                            <li>Clear vision and defined scope</li>
+                            <li>Systems ready for content expansion</li>
+                            <li>Genre with proven market potential</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <h3>Contact</h3>
+                    <div class="contact-grid">
+                        <div class="contact-item"><span class="contact-icon">📧</span><span
+                                class="todo-tag">[TBD]</span></div>
+                        <div class="contact-item"><span class="contact-icon">🎮</span><span class="todo-tag">[TBD
+                                Steam]</span></div>
+                        <div class="contact-item"><span class="contact-icon">💬</span><span class="todo-tag">[TBD
+                                Discord]</span></div>
+                        <div class="contact-item"><span class="contact-icon">🌐</span><span class="todo-tag">[TBD
+                                Web]</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">14</div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>RiftHunters Pitch Deck — Confidential — 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
