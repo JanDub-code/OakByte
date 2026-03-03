@@ -206,7 +206,7 @@
                         <h3>Procedural Dungeons</h3>
                         <ul>
                             <li>Modular prefab system (connector-based)</li>
-                            <li><strong>Deterministic seed</strong> → host generates, clients sync</li>
+                            <li><strong>Deterministic seed sync</strong> is planned for multiplayer rollout</li>
                             <li>Every run has different layout, traps, and puzzles and challanges</li>
                         </ul>
                         <div class="maze-preview" id="maze-preview"></div>
@@ -347,7 +347,7 @@
             </div>
         </section>
 
-        <!-- SLIDE 6 — Tech Readiness -->
+       <!-- SLIDE 6 — Tech Readiness -->
         <section class="slide" id="tech">
             <div class="slide-content">
                 <div class="slide-header">
@@ -355,39 +355,39 @@
                 </div>
                 <div class="tech-grid">
                     <div class="tech-item done">
-                        <div class="tech-status">✅</div>
+                        <div class="tech-status">Working</div>
                         <h4>Networking</h4>
                         <p>Unity NGO + Steamworks.NET</p>
                     </div>
                     <div class="tech-item done">
-                        <div class="tech-status">✅</div>
+                        <div class="tech-status">Working</div>
                         <h4>Voice Chat</h4>
-                        <p>Steam Voice + Proximity + Occlusion</p>
+                        <p>Voice + proximity + occlusion work in gameplay; needs more tuning and QA</p>
                     </div>
-                    <div class="tech-item done">
-                        <div class="tech-status">✅</div>
+                    <div class="tech-item partial">
+                        <div class="tech-status">Planned rollout</div>
                         <h4>Procedural Sync</h4>
-                        <p>Seed-based synchronization</p>
+                        <p>Seed-based multiplayer synchronization is planned</p>
                     </div>
                     <div class="tech-item done">
-                        <div class="tech-status">✅</div>
+                        <div class="tech-status">Working</div>
                         <h4>Authority Model</h4>
                         <p>Client-authority + Server validation</p>
                     </div>
                     <div class="tech-item done">
-                        <div class="tech-status">✅</div>
+                        <div class="tech-status">Working</div>
                         <h4>Steam Integration</h4>
                         <p>Lobby, invite, transport</p>
                     </div>
                     <div class="tech-item done">
-                        <div class="tech-status">✅</div>
+                        <div class="tech-status">Working</div>
                         <h4>Offline Fallback</h4>
                         <p>UnityTransport</p>
                     </div>
                     <div class="tech-item partial">
-                        <div class="tech-status">🔶</div>
+                        <div class="tech-status">In progress</div>
                         <h4>Cloud Save</h4>
-                        <p>JSON + Steam Cloud (code ready)</p>
+                        <p>Local JSON save works. Steam Cloud integration is planned</p>
                     </div>
                 </div>
                 <div class="tech-highlights">
@@ -398,16 +398,16 @@
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">💡</span>
-                        <span><strong>Event-based RPCs</strong> instead of constant sync = efficient bandwidth</span>
+                        <span><strong>Event-based RPCs</strong> are used where possible to keep bandwidth efficient</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">💡</span>
-                        <span><strong>Deterministic seed</strong> for maps = minimal network traffic</span>
+                        <span><strong>Deterministic seed sync</strong> is architecture direction and planned rollout, not final production state</span>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- SLIDE 7 — Development Status -->
         <section class="slide" id="status">
             <div class="slide-content">
@@ -416,108 +416,60 @@
                 </div>
                 <div class="status-sections">
                     <div class="status-section">
-                        <h3 class="status-done-title">✅ Completed Systems</h3>
+                        <h3 class="status-done-title">Implemented and Playable</h3>
                         <div class="status-bar-grid">
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="80">
                                 <span class="sbar-label">Class System</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="75">
                                 <span class="sbar-label">Inventory (pickup/drop/equip)</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="70">
                                 <span class="sbar-label">Combat (melee/ranged/magic)</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="65">
                                 <span class="sbar-label">AI Enemies</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="70">
                                 <span class="sbar-label">Traps & Ragdoll</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="65">
                                 <span class="sbar-label">Puzzle Framework</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="70">
                                 <span class="sbar-label">Quest + Dialog System</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="75">
                                 <span class="sbar-label">Proximity Voice Chat</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="55">
                                 <span class="sbar-label">Procedural Generation</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="70">
                                 <span class="sbar-label">Steam Multiplayer</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="100">
+                            <div class="status-bar-item" data-progress="70">
                                 <span class="sbar-label">UI/HUD + Emotes + Death/Spectate</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill" style="--progress:100%"></div>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="status-section">
-                        <h3 class="status-wip-title">🔶 Remaining</h3>
+                        <h3 class="status-wip-title">In Progress</h3>
                         <div class="status-bar-grid">
-                            <div class="status-bar-item" data-progress="60">
+                            <div class="status-bar-item" data-progress="40">
                                 <span class="sbar-label">Steam Cloud Integration</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill wip" style="--progress:60%"></div>
-                                </div>
                             </div>
                             <div class="status-bar-item" data-progress="30">
                                 <span class="sbar-label">Content (levels, items, quests)</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill wip" style="--progress:30%"></div>
-                                </div>
                             </div>
                             <div class="status-bar-item" data-progress="20">
                                 <span class="sbar-label">Polish (VFX, animations, audio)</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill wip" style="--progress:20%"></div>
-                                </div>
                             </div>
                             <div class="status-bar-item" data-progress="15">
                                 <span class="sbar-label">Balancing & QA</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill wip" style="--progress:15%"></div>
-                                </div>
                             </div>
-                            <div class="status-bar-item" data-progress="10">
-                                <span class="sbar-label">Steam Page & Marketing</span>
-                                <div class="sbar-track">
-                                    <div class="sbar-fill wip" style="--progress:10%"></div>
-                                </div>
+                            <div class="status-bar-item" data-progress="0">
+                                <span class="sbar-label">Steam Page setup</span>
                             </div>
                         </div>
                     </div>
@@ -525,8 +477,7 @@
                 <div class="phase-callout">
                     <span class="phase-icon">📍</span>
                     <div>
-                        <strong>Current Phase:</strong> <span class="todo-tag">[TBD]</span><br>
-                        <strong>Target:</strong> <span class="todo-tag">[TBD]</span>
+                        <strong>Current Phase:</strong> Playable Demo<br>
                     </div>
                 </div>
             </div>
@@ -950,3 +901,4 @@
 </body>
 
 </html>
+

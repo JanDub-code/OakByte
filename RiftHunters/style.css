@@ -1157,8 +1157,19 @@ body {
 }
 
 .tech-status {
-    font-size: 1.5rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     margin-bottom: 0.5rem;
+}
+
+.tech-item.done .tech-status {
+    color: var(--accent-green);
+}
+
+.tech-item.partial .tech-status {
+    color: var(--accent-orange);
 }
 
 .tech-item h4 {
@@ -1222,33 +1233,16 @@ body {
 }
 
 .status-bar-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-card);
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--border-radius-sm);
 }
 
 .sbar-label {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     color: var(--text-secondary);
-}
-
-.sbar-track {
-    height: 6px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.sbar-fill {
-    height: 100%;
-    width: var(--progress);
-    background: var(--accent-green);
-    border-radius: 3px;
-    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.sbar-fill.wip {
-    background: var(--accent-orange);
 }
 
 .phase-callout {
