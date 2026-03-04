@@ -49,7 +49,10 @@
     <main>
 
         <!-- SLIDE 1 — Hook -->
-        <section class="slide slide-hero" id="hook">
+        <section class="slide slide-hero" id="hook" style="position:relative; overflow:hidden;">
+            <div class="hero-bg-image"
+                style="position:absolute;inset:0;background-image:url('assets/Screenshot 2026-03-02 180837.png');background-size:cover;background-position:center;opacity:0.35;z-index:0;">
+            </div>
             <div class="hero-particles" id="hero-particles"></div>
             <div class="slide-content hero-content">
                 <div class="hero-badge">Steam · PC · Co-op 2–4 Players · Unity 6.3 · Peer to peer</div>
@@ -66,8 +69,11 @@
         </section>
 
         <!-- SLIDE 2 — Game Loop -->
-        <section class="slide" id="loop">
-            <div class="slide-content">
+        <section class="slide" id="loop" style="position:relative;overflow:hidden;">
+            <div class="loop-bg"
+                style="position:absolute;inset:0;background-image:url('assets/Screenshot 2026-03-03 230845.png');background-size:cover;background-position:center;opacity:0.08;z-index:0;">
+            </div>
+            <div class="slide-content" style="position:relative;z-index:1;">
                 <div class="slide-header">
                     <h2>Core Gameplay Loop</h2>
                 </div>
@@ -165,6 +171,10 @@
                             <span class="class-badge scholar">Scholar</span>
                             <span class="class-badge thief">Thief</span>
                         </div>
+                        <div class="pillar-screenshot">
+                            <img src="assets/Screenshot 2026-03-03 230819.png" alt="4 players with classes in tavern"
+                                loading="lazy">
+                        </div>
                     </div>
                     <div class="pillar-card" data-pillar="2">
                         <div class="pillar-icon"></div>
@@ -179,7 +189,10 @@
                                 new type of challenge. No generic monsters, no hordes of boring pawns, just meaningful
                                 in-depth threats.</li>
                         </ul>
-
+                        <div class="pillar-screenshot">
+                            <img src="assets/Screenshot 2026-03-03 231348.png" alt="AI enemies in dungeon ritual"
+                                loading="lazy">
+                        </div>
                     </div>
                     <div class="pillar-card" data-pillar="3">
                         <div class="pillar-icon"></div>
@@ -201,6 +214,10 @@
                             <div class="voice-bar"></div>
                             <div class="voice-bar"></div>
                         </div>
+                        <div class="pillar-screenshot">
+                            <img src="assets/Screenshot 2026-03-03 224436.png"
+                                alt="Players in tavern playing music" loading="lazy">
+                        </div>
                     </div>
                     <div class="pillar-card" data-pillar="4">
                         <div class="pillar-icon"></div>
@@ -211,6 +228,10 @@
                             <li>Every run has a different layout, traps, and puzzles and challenges</li>
                         </ul>
                         <div class="maze-preview" id="maze-preview"></div>
+                        <div class="pillar-screenshot">
+                            <img src="assets/Screenshot 2026-03-02 181000.png" alt="Looking through dungeon bars"
+                                loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -302,33 +323,23 @@
                     <h2>Visual Style & Art Direction</h2>
                 </div>
                 <div class="art-grid">
-                    <div class="art-placeholder">
-                        <div class="placeholder-inner">
-                            <span class="placeholder-icon">🖼️</span>
-                            <span>Screenshot / Concept Art</span>
-                            <span class="placeholder-note">TBD</span>
-                        </div>
+                    <div class="art-screenshot">
+                        <img src="assets/Screenshot 2026-03-02 180728.png" alt="Player in dark dungeon corridor"
+                            loading="lazy">
+                        <div class="art-screenshot-label">Dungeon Exploration</div>
                     </div>
-                    <div class="art-placeholder">
-                        <div class="placeholder-inner">
-                            <span class="placeholder-icon">🖼️</span>
-                            <span>Dungeon Atmosphere</span>
-                            <span class="placeholder-note">TBD</span>
-                        </div>
+                    <div class="art-screenshot">
+                        <img src="assets/Screenshot 2026-03-02 180534.png" alt="Dungeon atmosphere with torch"
+                            loading="lazy">
+                        <div class="art-screenshot-label">Atmospheric Lighting</div>
                     </div>
-                    <div class="art-placeholder">
-                        <div class="placeholder-inner">
-                            <span class="placeholder-icon">🖼️</span>
-                            <span>Combat / AI Moment</span>
-                            <span class="placeholder-note">TBD</span>
-                        </div>
+                    <div class="art-screenshot">
+                        <img src="assets/Screenshot 2026-03-02 180327.png" alt="AI enemy encounter" loading="lazy">
+                        <div class="art-screenshot-label">AI Enemy Encounter</div>
                     </div>
-                    <div class="art-placeholder">
-                        <div class="placeholder-inner">
-                            <span class="placeholder-icon">🖼️</span>
-                            <span>Tavern Hub</span>
-                            <span class="placeholder-note">TBD</span>
-                        </div>
+                    <div class="art-screenshot">
+                        <img src="assets/Screenshot 2026-03-03 224326.png" alt="Tavern Hub world" loading="lazy">
+                        <div class="art-screenshot-label">Tavern Hub</div>
                     </div>
                 </div>
                 <div class="grid grid-2" style="margin-top:2rem;">
