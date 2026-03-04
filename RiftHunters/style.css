@@ -1604,6 +1604,11 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    justify-content: center;
+}
+
+.contact-grid.single-item {
+    grid-template-columns: minmax(0, max-content);
 }
 
 .contact-item {
@@ -1617,6 +1622,31 @@ body {
 
 .contact-icon {
     font-size: 1.1rem;
+}
+
+.copy-email-btn {
+    appearance: none;
+    font: inherit;
+    line-height: 1.2;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition-fast);
+}
+
+.copy-email-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.copy-email-btn:focus-visible {
+    outline: 2px solid var(--accent-orange);
+    outline-offset: 2px;
+}
+
+.copy-email-btn.copied {
+    color: var(--accent-green);
+    background: var(--accent-green-glow);
+    border-color: rgba(63, 185, 80, 0.35);
 }
 
 /* --- Footer --- */

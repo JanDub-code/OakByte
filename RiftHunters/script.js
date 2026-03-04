@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMazePreview();
     initStatusBarAnimations();
     initActiveNav();
+    initContactEmailCopy();
 });
 
 // --- Progress Bar ---
@@ -220,4 +221,64 @@ function initActiveNav() {
     });
 
     sections.forEach(section => observer.observe(section));
+}
+
+// --- Contact email copy ---
+function initContactEmailCopy() {
+    const grid = document.querySelector('.contact-grid');
+    if (!grid) return;
+
+    const items = grid.querySelectorAll('.contact-item');
+    if (items.length === 1) {
+        grid.classList.add('single-item');
+    }
+
+    const copyButtons = grid.querySelectorAll('.copy-email-btn[data-copy-text]');
+    copyButtons.forEach((button) => {
+        button.addEventListener('click', async () => {
+            const email = button.dataset.copyText;
+            if (!email) return;
+
+            const originalLabel = button.textContent;
+            const copied = await copyTextToClipboard(email);
+
+            if (copied) {
+                button.classList.add('copied');
+                button.textContent = 'Copied';
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.textContent = originalLabel;
+                }, 1200);
+            }
+        });
+    });
+}
+
+async function copyTextToClipboard(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+        try {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } catch (_) {
+            // Fallback below.
+        }
+    }
+
+    const fallback = document.createElement('textarea');
+    fallback.value = text;
+    fallback.setAttribute('readonly', '');
+    fallback.style.position = 'fixed';
+    fallback.style.top = '-9999px';
+    document.body.appendChild(fallback);
+    fallback.select();
+
+    let copied = false;
+    try {
+        copied = document.execCommand('copy');
+    } catch (_) {
+        copied = false;
+    }
+
+    document.body.removeChild(fallback);
+    return copied;
 }
