@@ -54,7 +54,7 @@
                 style="position:absolute;inset:0;background-image:url('assets/Screenshot 2026-03-02 180837.png');background-size:cover;background-position:center;opacity:0.35;z-index:0;">
             </div>
             <div class="hero-particles" id="hero-particles"></div>
-            <div class="slide-content hero-content">
+            <div class="slide-content hero-content" style="padding-bottom:2rem;">
                 <div class="hero-badge">Steam · PC · Co-op 2–4 Players · Unity 6.3 · Peer to peer</div>
                 <h1 class="hero-title">
                     <span class="hero-title-accent">Rift</span>Hunters
@@ -66,8 +66,34 @@
                 <div class="hero-cta">
                     <a href="#ask" class="btn btn-ghost">What We're Looking For</a>
                 </div>
+                <!-- Video Showcase Button -->
+                <div class="hero-video-trigger" id="hero-video-trigger">
+                    <button type="button" class="video-play-btn" id="video-play-btn" aria-label="Watch Showcase Video">
+                        <span class="video-play-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </span>
+                        <span class="video-play-label">Watch Showcase</span>
+                    </button>
+                    <p class="video-play-hint">Click to watch our gameplay showcase</p>
+                </div>
             </div>
         </section>
+
+        <!-- Fullscreen Video Overlay -->
+        <div class="video-overlay" id="video-overlay">
+            <button type="button" class="video-overlay-close" id="video-overlay-close"
+                aria-label="Close video">&times;</button>
+            <div class="video-overlay-inner">
+                <iframe id="video-iframe" src=""
+                    data-src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID?autoplay=1&rel=0&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                    allowfullscreen title="RiftHunters Showcase Video">
+                </iframe>
+            </div>
+        </div>
 
         <!-- SLIDE 2 — Game Loop -->
         <section class="slide" id="loop" style="position:relative;overflow:hidden;">

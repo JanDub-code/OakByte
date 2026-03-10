@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initStatusBarAnimations();
     initActiveNav();
     initContactEmailCopy();
+    initVideoOverlay();
 });
 
 // --- Progress Bar ---
@@ -281,4 +282,50 @@ async function copyTextToClipboard(text) {
 
     document.body.removeChild(fallback);
     return copied;
+}
+
+// --- Video Overlay ---
+function initVideoOverlay() {
+    const playBtn = document.getElementById('video-play-btn');
+    const overlay = document.getElementById('video-overlay');
+    const closeBtn = document.getElementById('video-overlay-close');
+    const iframe = document.getElementById('video-iframe');
+    if (!playBtn || !overlay || !iframe) return;
+
+    const videoSrc = iframe.getAttribute('data-src');
+
+    function openVideo() {
+        iframe.setAttribute('src', videoSrc);
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideo() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        // Stop video by clearing src after transition
+        setTimeout(() => {
+            iframe.setAttribute('src', '');
+        }, 400);
+    }
+
+    playBtn.addEventListener('click', openVideo);
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeVideo);
+    }
+
+    // Close on backdrop click (outside the video)
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeVideo();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closeVideo();
+        }
+    });
 }
